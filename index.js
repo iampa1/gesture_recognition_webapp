@@ -12,7 +12,7 @@ async function app() {
   // from the web camera as Tensor.
   const webcam = await tf.data.webcam(webcamElement);
 
-  const doNothing = () => {}
+ 
 	
   // Reads an image from the webcam and associates it with a specific class
   // index.
@@ -36,7 +36,7 @@ async function app() {
   document.getElementById('class-a').addEventListener('click', () => addExample(0));
   document.getElementById('class-b').addEventListener('click', () => addExample(1));
   document.getElementById('class-c').addEventListener('click', () => addExample(2));
-  document.getElementById('class-n').addEventListener('click', () =>  doNothing());
+  
 
   while (true) {
     if (classifier.getNumClasses() > 0) {
